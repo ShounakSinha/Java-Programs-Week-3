@@ -90,3 +90,49 @@ class KaprekarCheck implements NumberCheck {
     }
 }
 
+// Main class Everynumop with menu-driven code
+public class Everynumop {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Array of NumberCheck instances for polymorphic behavior
+        NumberCheck[] checks = {
+            new ArmstrongCheck(),
+            new FibonacciCheck(),
+            new PalindromeCheck(),
+            new KaprekarCheck()
+        };
+
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("\n---- Menu ----");
+            for (int i = 0; i < checks.length; i++) {
+                System.out.println((i + 1) + ". Check " + checks[i].getType() + " Number");
+            }
+            System.out.println((checks.length + 1) + ". Exit");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            if (choice >= 1 && choice <= checks.length) {
+                System.out.print("Enter a number to check for " + checks[choice - 1].getType() + ": ");
+                int number = scanner.nextInt();
+                
+                // Polymorphic call to the appropriate check method
+                if (checks[choice - 1].check(number)) {
+                    System.out.println(number + " is a " + checks[choice - 1].getType() + " number.");
+                } else {
+                    System.out.println(number + " is not a " + checks[choice - 1].getType() + " number.");
+                }
+            } else if (choice == checks.length + 1) {
+                exit = true;
+                System.out.println("Exiting the program...");
+            } else {
+                System.out.println("Invalid choice! Please try again.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
