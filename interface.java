@@ -5,3 +5,6 @@ interface bike
     void useAccelerator();
     void changeGears();
   }
+class apacheBike implements bike
+  {
+    
