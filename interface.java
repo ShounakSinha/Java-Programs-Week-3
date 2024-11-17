@@ -63,7 +63,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             ApacheBike bike = new ApacheBike();
-
+            //user input can be given here
             // Sample actions
             bike.displayStatus();
             bike.useAccelerator(20);
