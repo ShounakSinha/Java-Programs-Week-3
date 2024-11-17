@@ -13,12 +13,12 @@ class apacheBike implements bike
     BufferedReader br = new BufferedReader(in);   //taking inout using inputstreamreader
     //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  //single line inout using Buffered Reader
     System.out.println("Enter the current speed of the car and the current gear : ");
-    int latestSpeed =  Integer.parseInt(br.readline);
-    int currentGear = Integer.parseInt(br.readLine);
+    int latestSpeed =  Integer.parseInt(br.readline());
+    int currentGear = Integer.parseInt(br.readLine());
     System.out.println(("Enter the accelaration decceleration and change in gear required : ");
-    int accelerate=Integer.parseInt(br.readLine);
-    int brake =  Integer.parseInt(br.readLine);
-    int currentGear = Integer.parseInt(br.readLine);
+    int accelerate=Integer.parseInt(br.readLine());
+    int brake =  Integer.parseInt(br.readLine());
+    int currentGear = Integer.parseInt(br.readLine());
     void applyBrake(int brake)
     {
       latestSpeed=latestSpeed - brake;
