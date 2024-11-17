@@ -10,7 +10,8 @@ interface bike
 class apacheBike implements bike
   {
     InputStreamReader in = new InputStreamReader(System.in);
-    BufferedReader read = new BufferedReader(in);   //taking inout using inputstreamreader
+    BufferedReader br = new BufferedReader(in);   //taking inout using inputstreamreader
+    //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  //single line inout using Buffered Reader
     void applyBrake(int brake)
     {
       latestSpeed=latestSpeed - brake;
