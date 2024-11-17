@@ -59,6 +59,24 @@ class ApacheBike implements Bike {
     }
 }
 
+public class Main {
+    public static void main(String[] args) {
+        try {
+            ApacheBike bike = new ApacheBike();
+
+            // Sample actions
+            bike.displayStatus();
+            bike.useAccelerator(20);
+            bike.changeGears(3);
+            bike.applyBrake(10);
+            bike.displayStatus();
+        } catch (IOException e) {
+            System.out.println("An error occurred while taking input: " + e.getMessage());
+        }
+    }
+}
+
+
 
    
     
