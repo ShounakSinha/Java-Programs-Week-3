@@ -3,7 +3,7 @@ interface bike
   {
     void applyBrake(int brake);
     void useAccelerator(int accelerate);
-    void changeGears();
+    void changeGears(int gearNumber);
   }
 class apacheBike implements bike
   {
@@ -15,5 +15,10 @@ class apacheBike implements bike
     {
       latestSpeed=latestSpeed + accelerate;
     }
+    void changeGears(int gearNumber)
+    {
+      currentGear = gearNumber;
+    }
+  }
     
     
