@@ -21,4 +21,18 @@ class Rectangle extends Shape
         System.out.println("The area of a rectangle is : "+ar+" square units");
     }
 }
+class Circle extends Shape
+{
+    double radius, ar;
+    
+    Circle(double radius)
+    {
+        this.radius=radius;
+    }
+    public void area()
+    {
+        ar=3.142*radius*radius;
+        System.out.println("The area of the circle is : "+ar+" square units");
+    }
+}
 
